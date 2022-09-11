@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="highchart.js"></script>
+    <script src="wordcloud.js"></script>
+    <script src="exporting.js"></script>
+    <script src="export-data.js"></script>
+    <script src="accessibility.js"></script>
+    <script src="wind.js"></script>
+    <link href="dasiy.css" rel="stylesheet" type="text/css" />
+    <link href="chart.css" rel="stylesheet" type="text/css" />
+    
+    <title>Instagram Engagement Rate Calculator</title>
+</head>
+
+<body data-theme="corporate">
+    <div class="container mx-auto">
+        <div class="grid place-items-center mt-6">
+            <div class="form-control">
+                <div>
+                    <label class="input-group">
+                        <span>@</span>
+                        <input type="text" placeholder="Username" class="input input-bordered input-primary"
+                            id="username" />
+                        <button class="btn btn-outline" id="ok_btn">Submit</button>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid place-items-center mt-6">
+        <div class="avatar placeholder">
+            <div class="bg-neutral-focus text-neutral-content rounded-full w-24">
+                <span class="text-3xl" id="placeholder_name"></span>
+            </div>
+        </div>
+        <p id="full_name" class="mt-1"></p>
+        <p id="biography" class="mt-1"></p>
+    </div>
+    <div class="container mx-auto">
+        <div class="grid grid-cols-4 place-items-center gap-4 mt-6">
+            <div>
+                <div class="stat">
+                    <div class="stat-title">Follower Count</div>
+                    <div class="stat-value" id="follower-count">0</div>
+                </div>
+            </div>
+            <div>
+                <div class="stat">
+                    <div class="stat-title">Following Count</div>
+                    <div class="stat-value" id="following-count">0</div>
+                </div>
+            </div>
+            <div>
+                <div class="stat">
+                    <div class="stat-title">Media Count</div>
+                    <div class="stat-value" id="media-count">0</div>
+                </div>
+            </div>
+            <div>
+                <div class="stat">
+                    <div class="stat-title">Avg Engagement Rate</div>
+                    <div class="stat-value" id="er">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto">
+        <div id="container"></div>
+    </div>
+    <div class="container mx-auto">
+        <figure class="highcharts-figure">
+            <div id="hashtags"></div>
+        </figure>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

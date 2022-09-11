@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Instagram Engagement Rate",
+    "version": "0.1.0",
+    "description": "This extension provides engagement rate for a given public profile username",
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
+    "host_permissions": ["*://*.instagram.com/*"],
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    }
+  }
